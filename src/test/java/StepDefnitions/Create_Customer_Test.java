@@ -17,7 +17,7 @@ public class Create_Customer_Test extends TestSetup {
 	@Given("I have valid auth key")
 	public void i_have_valid_auth_key() {
 
-		log = Logger.getLogger(Create_Customer_Test.class);
+		//log = Logger.getLogger(Create_Customer_Test.class);
 
 		// Authentication using basic auth
 		// requestSpecs=given().auth().basic(configProperty.getValidAuthKey(),"");
@@ -25,7 +25,7 @@ public class Create_Customer_Test extends TestSetup {
 		// Authentication using header
 		requestSpecs = given().header("Authorization", "Bearer " + configProperty.getValidAuthKey());
 
-		log.info("Valid Auth Key Entered...");
+		log.info("Valid Auth Key "+ configProperty.getValidAuthKey()+ " Entered...");
 
 	}
 
@@ -33,7 +33,7 @@ public class Create_Customer_Test extends TestSetup {
 	public void i_have_email_and_description(String pEmail, String pDescription) {
 		requestSpecs = requestSpecs.formParam("email", pEmail).formParam("description", pDescription);
   
-		log.info("Email and Description entered...");
+		log.info("Email "+pEmail+ "and Description "+pDescription+ " entered...");
 	}
 
 	@When("I send post request")
@@ -49,7 +49,7 @@ public class Create_Customer_Test extends TestSetup {
 	public void i_verify_status_code_is(int statusCode) {
 		
 		Assert.assertEquals(response.statusCode(), statusCode);
-		log.info("Status code verified...");
+		log.info("Status code "+statusCode+ " verified");
 
 	}
 
@@ -58,7 +58,7 @@ public class Create_Customer_Test extends TestSetup {
 		responseJson = response.jsonPath();
 		Assert.assertEquals(responseJson.get("email"), pemail);
 		Assert.assertEquals(responseJson.get("description"), pdescription);
-		log.info("Email ID and Description verifed...");
+		log.info("Email "+pemail+ "and Description "+pdescription+ " verified...");
 
 	}
 
@@ -67,7 +67,7 @@ public class Create_Customer_Test extends TestSetup {
 
 		// Check id field is not null
 		Assert.assertNotNull(TestUtils.checkJsonHasKey(id, response));
-		log.info("ID field checked in response...");
+		log.info("ID field "+id+ " checked in response...");
 
 	}
 	
@@ -76,7 +76,7 @@ public class Create_Customer_Test extends TestSetup {
 		// Authentication using header
 				requestSpecs = given().header("Authorization", "Bearer " + configProperty.getInvalidAuthKey());
 
-				log.info("In-Valid Auth Key Entered...");
+				log.info("In-Valid Auth Key "+ configProperty.getInvalidAuthKey()+ " Entered...");
 
 	}
 
@@ -91,7 +91,7 @@ public class Create_Customer_Test extends TestSetup {
 	   responseJson=response.jsonPath();
 	   boolean status=responseJson.getString("error.message").contains(errorMsg);
 	   Assert.assertTrue(status);
-	   log.info("Verified response contains error message...");
+	   log.info("Verified response contains error message "+errorMsg);
 	
 	
 	

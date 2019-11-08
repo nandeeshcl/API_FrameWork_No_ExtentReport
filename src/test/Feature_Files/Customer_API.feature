@@ -2,7 +2,7 @@
 Feature: Test Customer API with different functionality
   This features is used to validate Customer API Functionality
 
-  @Positive_Scenario
+  @Create_Customer_Valid_Key
   Scenario Outline: Validate Create Customer API with valid auth key
     Given I have valid auth key
     And I have email "<email>" and description "<description>"
@@ -15,7 +15,7 @@ Feature: Test Customer API with different functionality
       | email           | description | statusCode | field |
       | name1@gmail.com | name1       |        200 | id    |
 
-  @Negative_Scenario
+  @Create_Customer_In-Valid_Key
   Scenario Outline: Validate Create Customer API with in-valid auth key
     Given I have in-valid auth key
     When I send post request
@@ -24,5 +24,33 @@ Feature: Test Customer API with different functionality
     And response contains the "<message>"
 
     Examples: 
-      | message                                                               | statusCode | field |
+      | message                  | statusCode | field |
       | Invalid API Key provided |        401 | id    |
+
+  @Retrieve_Customer
+  Scenario Outline: Validate Retrieve Customer API
+    This scenario is used to test retrieve customer API
+
+    Given I have valid auth key
+    When I send get request with customerID "<cusID>"
+    Then I verify status code is <statusCode>
+    And I verify same customer ID present in the response "<cusID>"
+
+    Examples: 
+      | cusID              | statusCode |
+      | cus_G8jJBjNWUuX6LE |        200 |
+      | cus_G8k08zfnnNIbmk |        200 |
+
+  @Retrieve_Customer_with_EID
+  Scenario Outline: Validate Retrieve Customer API with existing created Customer ID
+    This scenario is used to test retrieve customer API
+
+    Given I have valid auth key
+    When I get customerID from Createcustomer API
+    And I send get request with obtained customerID
+    Then I verify status code is <statusCode>
+    And I verify same customer ID present in the response
+
+    Examples: 
+      | statusCode |
+      |        200 |

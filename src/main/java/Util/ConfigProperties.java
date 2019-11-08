@@ -38,6 +38,9 @@ public interface ConfigProperties extends Config   {
 	@Key("log4jPath")
 	public String getlog4jPath();
 	
+	@Key("retrieveCustomerAPIEndPoint")
+	public String getretrieveCustomerAPIEndPoint();
+	
 	
 	
 }

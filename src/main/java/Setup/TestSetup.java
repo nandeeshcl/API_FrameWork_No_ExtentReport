@@ -3,6 +3,8 @@ package Setup;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+
+import StepDefnitions.Create_Customer_Test;
 import Util.ConfigProperties;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -34,7 +36,7 @@ public class TestSetup  {
 			//Load logger file
 			//LOG4J PROPERTY FILE LOAD
 			//log=Logger.getLogger("Practise");
-			
+			log = Logger.getLogger("Customer_API");
 			PropertyConfigurator.configure("./src/test/PropertyFile/log4j.properties");
 			
 			
@@ -46,6 +48,8 @@ public class TestSetup  {
 			RestAssured.basePath = configProperty.getBasePath();
 			
 		}
+		
+		
 		
 
 		
