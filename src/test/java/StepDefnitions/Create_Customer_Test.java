@@ -9,7 +9,6 @@ import cucumber.api.java.en.When;
 
 import static io.restassured.RestAssured.*;
 
-import org.apache.log4j.Logger;
 import org.testng.Assert;
 
 public class Create_Customer_Test extends TestSetup {

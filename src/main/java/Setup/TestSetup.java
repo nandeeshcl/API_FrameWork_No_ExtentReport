@@ -4,7 +4,6 @@ import org.aeonbits.owner.ConfigFactory;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-import StepDefnitions.Create_Customer_Test;
 import Util.ConfigProperties;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;

@@ -8,8 +8,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import static io.restassured.RestAssured.*;
-
 public class Retrieve_Customer_Test extends TestSetup {
 
 	public String cID;
