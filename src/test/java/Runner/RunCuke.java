@@ -7,8 +7,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 		plugin = { "json:target/cucumber.json", "pretty", "html:target/cucumber.html" },
 
-		features = "./src/test/Feature_Files", glue ="StepDefnitions", monochrome = true
-     // tags={" @Retrieve_Customer_with_EID"}
+		features = "./src/test/Feature_Files", glue ="StepDefnitions", monochrome = true,
+		strict=true
+      //, tags={"@Update_Customer"}
 
 )
 public class RunCuke extends AbstractTestNGCucumberTests {

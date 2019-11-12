@@ -54,3 +54,18 @@ Feature: Test Customer API with different functionality
     Examples: 
       | statusCode |
       |        200 |
+
+  @Update_Customer
+  Scenario Outline: Validate Update Customer API
+    This scenario is used to test Update customer api working fine for balance, description and email change
+
+    Given I have valid auth key
+    When I update email "<email>" description "<description>" and balance <balance>
+    And I send post request for Update_Customer_API
+    Then I verify status code is <statusCode>
+    And response contains same email "<email>" description "<description>" and balance <balance>
+
+    Examples: 
+      | email           | description              | balance | statusCode |
+      | appu1@gmail.com | Testing Update Feature 1 |    5000 |        200 |
+      | appu2@gmail.com | Testing Update Feature 2 |    6000 |        200 |
