@@ -9,7 +9,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 		features = "./src/test/Feature_Files", glue ="StepDefnitions", monochrome = true,
 		strict=true
-      , tags={"@Delete_Customer"}
+      //, tags={"@Delete_Customer"}
 
 )
 public class RunCuke extends AbstractTestNGCucumberTests {
