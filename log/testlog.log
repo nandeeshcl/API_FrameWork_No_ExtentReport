@@ -78,3 +78,20 @@
 2019-11-12 13:21:13,384 - Customer_API -INFO - Verified email: appu2@gmail.com
 2019-11-12 13:21:13,400 - Customer_API -INFO - Verifed description: Testing Update Feature 2
 2019-11-12 13:21:13,413 - Customer_API -INFO - Verified balance: 6000
+2019-11-13 14:42:41,617 - Customer_API -INFO - Valid Auth Key sk_test_rUdaFNxpSc5PwPeGK6WWryNT00UMqhZ2Fm Entered...
+2019-11-13 14:42:42,264 - Customer_API -INFO - Status code 200 verified
+2019-11-13 18:13:03,749 - Customer_API -INFO - cus_GAgXYtMmJtn6Xl
+2019-11-13 18:13:03,764 - Customer_API -INFO - Valid Auth Key sk_test_rUdaFNxpSc5PwPeGK6WWryNT00UMqhZ2Fm Entered...
+2019-11-13 18:13:06,455 - Customer_API -INFO - Status code 200 verified
+2019-11-13 18:16:46,901 - Customer_API -INFO - cus_GAgbGQS2YCIixX
+2019-11-13 18:16:46,908 - Customer_API -INFO - Valid Auth Key sk_test_rUdaFNxpSc5PwPeGK6WWryNT00UMqhZ2Fm Entered...
+2019-11-13 18:16:49,751 - Customer_API -INFO - Status code 200 verified
+2019-11-13 18:17:24,514 - Customer_API -INFO - cus_GAgbsBbvEcIuIn
+2019-11-13 18:17:24,518 - Customer_API -INFO - Valid Auth Key sk_test_rUdaFNxpSc5PwPeGK6WWryNT00UMqhZ2Fm Entered...
+2019-11-13 18:17:27,165 - Customer_API -INFO - Status code 200 verified
+2019-11-13 18:32:26,454 - Customer_API -INFO - New Customer ID: cus_GAgqVIbMZnQZWk
+2019-11-13 18:32:26,461 - Customer_API -INFO - Valid Auth Key sk_test_rUdaFNxpSc5PwPeGK6WWryNT00UMqhZ2Fm Entered...
+2019-11-13 18:32:29,070 - Customer_API -INFO - Delete request sent successfully...
+2019-11-13 18:32:29,072 - Customer_API -INFO - Status code 200 verified
+2019-11-13 18:32:29,080 - Customer_API -INFO - Customer ID: cus_GAgqVIbMZnQZWk field verified 
+2019-11-13 18:32:29,089 - Customer_API -INFO - Deleted field contains the value: true Verified

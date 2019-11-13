@@ -69,3 +69,16 @@ Feature: Test Customer API with different functionality
       | email           | description              | balance | statusCode |
       | appu1@gmail.com | Testing Update Feature 1 |    5000 |        200 |
       | appu2@gmail.com | Testing Update Feature 2 |    6000 |        200 |
+
+  @Delete_Customer
+  Scenario Outline: Validate Delete customer API
+    Given I have created customer ID
+    And I have valid auth key
+    When I send post request for Delete_Customer_API
+    Then I verify status code is <statusCode>
+    And Id in response is same as ID I sent while deleting request
+    And the key deleted is "true"
+
+    Examples: 
+      | statusCode |
+      |        200 |

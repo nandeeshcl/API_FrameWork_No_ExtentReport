@@ -22,7 +22,11 @@ public class TestUtils extends TestSetup {
 	    
 		String customerID=response.jsonPath().getString("id");
 		
+		log.info("New Customer ID: "+customerID);
+		
 		return customerID;
+		
+		
 	
 	}
 
